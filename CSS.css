@@ -1,13 +1,24 @@
 body {
-    background-color:black;
+    background-color:rgb(88, 84, 84);
 }
 
 .navbar {
-    background-color:yellow;
+    position: sticky;
+}
+
+.nav_list {
+    background-color:rgb(223, 247, 14);
     margin: 0;
-    padding: 0;
+    padding: 5px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
+}
+.nav_item{
+    list-style: none;
+    margin-left: 50px;
+}
+.nav_item:first-child{
+    margin-right: auto;
+    margin-left: 5px;
 }
