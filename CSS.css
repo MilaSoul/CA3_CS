@@ -1,7 +1,13 @@
+body {
+    background-color:black;
+}
+
 .navbar {
-    background-color: black;
-    list-style-type: none;
-
-
+    background-color:yellow;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
 }
