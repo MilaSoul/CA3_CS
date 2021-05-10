@@ -38,17 +38,20 @@ body {
     padding: 20px;
 
 }
+#errorbox {
+    background-color: aquamarine;
+    border-radius: 5px;
+    width: 300px;
+    height: 220px;
+    display: flex;
+    margin-left: 40%;
+    padding: 20px;
+}
 
 #error {
-    background-color: blue;
-    width: 300px;
-    height: 150px;
-    margin: 20px;
-    display: flex;
     padding: 20px;
-    margin-top:20px;
-    font-size: small;
     display: none;
+   
 }
 
 .valid {
@@ -57,7 +60,7 @@ body {
 
   .valid:before {
     position: relative;
-    left: -35px;
+    left: -40px;
     content: "✔";
   }
 
@@ -67,7 +70,7 @@ body {
   
   .invalid:before {
     position: relative;
-    left: -35px;
+    left: -40px;
     content: "✖";
   }
 

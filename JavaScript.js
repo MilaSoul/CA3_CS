@@ -1,5 +1,6 @@
+
 // initailising varibels by getting them from html code
-var myInput = document.getElementById("password");
+var myInput = document.getElementById("pass");
 var letter = document.getElementById("letter");
 var uppercase = document.getElementById("uppercase");
 var number = document.getElementById("number");
@@ -11,7 +12,7 @@ myInput.onfocus = function(){
 }
 
 //remove the eeror box from the screen
-muImput.onblur = function(){
+myInput.onblur = function(){
     document.getElementById("error").style.display = "none"
 }
 
@@ -19,7 +20,7 @@ muImput.onblur = function(){
 myInput.onkeyup = function(){
     var LowerCaseLett = /[a-z]/g;
     
-    if(muInput.value.match(LowerCaseLett)){
+    if(myInput.value.match(LowerCaseLett)){
         letter.classList.remove("invalid");
         letter.classList.add("valid");
     } else {
@@ -49,7 +50,7 @@ myInput.onkeyup = function(){
      }
 
 // Pssword lenght
-     if(muInput.value.lenght >= 8) {
+     if(myInput.value.lenght >= 8) {
         lenght.classList.remove("invalid");
         lenght.classList.add("valid");
     } else {

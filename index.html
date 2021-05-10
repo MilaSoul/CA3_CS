@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
-
+    <script src = "JavaScript.js"> </script>
 
     <link rel = "stylesheet" href="CSS.css"> 
 
@@ -24,37 +24,34 @@
 
 
 <div id = box_valid>
-    
-    <form action = "/" method = "Get">
+    <form action = "/action_page.php">
         <h2>Hello! Enter your password</h2>
        
-    <div>
-        <lable for = "password">Password</lable>
-        <input type = "password" id = "password" name = "password" 
-         pattern = "(?=.*\d) (?=.*[a-z]) (?=.*[A-Z]).{8,}" 
-         title = "Must contain at least one number and one uppercase 
+        <lable for = "pass">Password</lable>
+        <input type = "password" id = "pass" name = "pass" 
+         pattern ="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"title = "Must contain at least one number and one uppercase 
          and lowwercase letter, and at least 8 characters" required>
     
         <input type="submit" value="Submit">
+    </form>
     </div>
-
-     </form>
-
+     
 
 
+<div id = "errorbox"> 
 <div id = "error">
     <h2>Password must contain:</h2>
 
-<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+<p id="letter" class="invalid"> A <b>lowercase</b> letter</p>
 <p id="uppercase" class="invalid">A <b>uppercase</b> letter</p>
 <p id="number" class="invalid">A <b>a digit</b></p>
 <p id="length" class="invalid">Minimum <b>8 characters</b></p>
 </div>
+</div>
 
 
+<script src = "JavaScript.js"> </script>
 
-    
-    <script src = "JavaScript.js"> </script>
 
 </body>
 </html>
