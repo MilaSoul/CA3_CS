@@ -16,6 +16,9 @@ body {
     align-items: center;
     height: 40px;
 }
+#subbut{
+    margin-top: 10px;
+}
 .nav_item{
     list-style: none;
     margin-left: 50px;
@@ -28,11 +31,45 @@ body {
     background-color: blue;
     border-radius: 5px;
     width: 300px;
-    height: 200px;
+    height: 150px;
     margin: 20px;
     display: flex;
     margin-left: 40%;
     padding: 20px;
 
 }
+
+#error {
+    background-color: blue;
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    padding: 20px;
+    margin-top:20px;
+    font-size: small;
+    display: none;
+}
+
+.valid {
+    color: green;
+  }
+
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }
+
+
 
