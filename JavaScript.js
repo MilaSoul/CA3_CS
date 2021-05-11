@@ -74,12 +74,13 @@ function rundomCustomer(){
         author.forEach(function(customer){
             output += `
            <div
-               <h3>${customer.name}</h3>
+               <h3>Name:${customer.name.first}</h3>
                <ul>
-                   <li>picture: ${customer.picture}</li>
-                   <li>email: ${customer.email}</li>
-                   <li>phone: ${customer.phone}</li>
-                   <li>gender: ${customer.gender}</li>
+                   <img src="${customer.picture.large}">
+                   <li>Age: ${customer.registered.age}</li>
+                   <li>Gender: ${customer.gender}</li>
+                   <li>Email: ${customer.email}</li>
+                   <li>Phone: ${customer.phone}</li>
                </ul>
            </div>
            `;
