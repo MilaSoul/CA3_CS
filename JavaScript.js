@@ -62,17 +62,15 @@ myInput.onkeyup = function(){
 
 document.getElementById("rundomCustomer").addEventListener('click', rundomCustomer);
 
-function getUsers(){
-    fetch('')
-    .then((res) => res.json())
-    .then((data) => {
-        let author = data.result;
-        let output = '<h1>Coustomers</h1>';
-        console.log(data);
+function rundomCustomer(){
+       fetch('https://randomuser.me/api/')
+        .then ((res) => res.json())
+        .then((data) => {
+         let author = data.result;
+         let output = '<h2> Customer</h2>'
 
-        data.forEach(function(customer){
-            output +=
-           <div>
+            output += `
+           <div
                <h3>${customer.result.name}</h3>
                <ul>
                    <li>picture: ${customer.result.picture}</li>
@@ -81,8 +79,9 @@ function getUsers(){
                    <li>gender: ${customer.result.gender}</li>
                </ul>
            </div>
-        })
+           `;
+        });
 
     }
-}
+document.getElementById('output').innerHTML = output;
 
