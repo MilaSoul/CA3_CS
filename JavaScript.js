@@ -60,3 +60,29 @@ myInput.onkeyup = function(){
 
 }
 
+document.getElementById("rundomCustomer").addEventListener('click', rundomCustomer);
+
+function getUsers(){
+    fetch('')
+    .then((res) => res.json())
+    .then((data) => {
+        let author = data.result;
+        let output = '<h1>Coustomers</h1>';
+        console.log(data);
+
+        data.forEach(function(customer){
+            output +=
+           <div>
+               <h3>${customer.result.name}</h3>
+               <ul>
+                   <li>picture: ${customer.result.picture}</li>
+                   <li>email: ${customer.result.email}</li>
+                   <li>phone: ${customer.result.phone}</li>
+                   <li>gender: ${customer.result.gender}</li>
+               </ul>
+           </div>
+        })
+
+    }
+}
+
