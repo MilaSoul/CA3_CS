@@ -4,7 +4,7 @@ var myInput = document.getElementById("pass");
 var letter = document.getElementById("letter");
 var uppercase = document.getElementById("uppercase");
 var number = document.getElementById("number");
-var lenght = document.getElementById("lenght");
+var lenght = document.getElementById("lenghtpass");
 
 //showing the error box  
 myInput.onfocus = function(){
@@ -54,8 +54,8 @@ myInput.onkeyup = function(){
         lenght.classList.remove("invalid");
         lenght.classList.add("valid");
     } else {
-       lenght.classList.remove("valid");
-        lenght.classList.add("invalid"); 
+       lenghtpass.classList.remove("valid");
+        lenghtpass.classList.add("invalid"); 
     }
 
 }
