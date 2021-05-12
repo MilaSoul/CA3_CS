@@ -92,4 +92,24 @@ document.getElementById('output').innerHTML = output;
 };
 
 
+var total_items = 12;
+
+        function CalculateItemsValue(){
+            var total = 0;
+
+            for (let i = 1; i <= total_items; i++) {
+               itemID =document.getElementById("q_" + i);
+               total = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
+                
+            }
+            document.getElementById('ItemsTotal').innerHTML = "$" + total;
+        }
+
+        document.querySelectorAll('[id^="q_"]').forEach(item => {
+            item.addEventListener('keyup', CalculateItemsValue);
+        });
+
+var starters = 3;
+
+
 
