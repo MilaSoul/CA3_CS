@@ -180,3 +180,11 @@ function CalculateStartersValue(){
     });
 }
 
+
+const carouselSlide = document.querySelectorAll('.carousel-slide');
+const coriuselImages = document.querySelectorAll('.carousel-slides');
+
+const prevBtn = document.querySelector('#prevButton');
+const nextBtn = document.querySelector('#nextButton');
+
+
