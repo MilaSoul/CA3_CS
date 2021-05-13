@@ -102,8 +102,10 @@ var total_items = 12;
             var total = 0;
             var total_Starters = 0;
             var total_Main = 0;
-            var total_Deserts =0;
+            var total_Deserts = 0;
             var total_Drinks = 0;
+            var total_Veg = 0;
+            var total_NonVeg  = 0;
 
            /*for (let i = 1; i <= total_items; i++) {
               itemID =document.getElementById("q_" + i);
@@ -114,6 +116,7 @@ var total_items = 12;
             document.querySelectorAll('[id^="q_"]').forEach(item => {
                 var item_price = parseInt(item.value)*parseInt(item.getAttribute("data-price"))
                 var item_cat = item.getAttribute("data-cat");
+                
                 if (!isNaN(item_price)) {
                     if (item_cat == 'Starters') {
                         total_Starters += item_price;
@@ -127,6 +130,17 @@ var total_items = 12;
                     if (item_cat == 'Drinks'){
                         total_Drinks += item_price;
                      }
+
+            
+                    var item_veg = item.getAttribute("data-veg");
+
+                    if (item_veg == 'true'){
+                        total_Veg += item_price;
+                    }
+                    if (item_veg == 'false'){
+                        total_NonVeg += item_price;
+                    }
+                    
                     }
                  
                 total = total + item_price;
@@ -137,6 +151,8 @@ var total_items = 12;
             document.getElementById('ItemTotalMain').innerHTML = "$" + total_Main;
             document.getElementById('ItemTotalDeserts').innerHTML = "$" + total_Deserts;
             document.getElementById('ItemTotalDrinks').innerHTML = "$" + total_Drinks;
+            document.getElementById('ItemTotalVegeterian').innerHTML = "$" + total_Veg;
+            document.getElementById('ItemTotalNonVeg').innerHTML = "$" + total_NonVeg;
         }
 
         document.querySelectorAll('[id^="q_"]').forEach(item => {
