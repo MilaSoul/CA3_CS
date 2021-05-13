@@ -102,7 +102,8 @@ var total_items = 12;
             var total = 0;
             var total_Starters = 0;
             var total_Main = 0;
-            var total_Deserts
+            var total_Deserts =0;
+            var total_Drinks = 0;
 
            /*for (let i = 1; i <= total_items; i++) {
               itemID =document.getElementById("q_" + i);
@@ -121,8 +122,10 @@ var total_items = 12;
                     total_Main += item_price;
                     }  
                     if (item_cat == 'Deserts'){
-                        total_Dserts == +- item_price;
+                        total_Deserts += item_price;
                     }
+                    if (item_cat == 'Drinks'){
+                        total_Drinks += item_price;
 
                 }
                  
@@ -133,6 +136,7 @@ var total_items = 12;
             document.getElementById('ItemTotalStarters').innerHTML = "$" + total_Starters;
             document.getElementById('ItemTotalMain').innerHTML = "$" + total_Main;
             document.getElementById('ItemTotalDeserts').innerHTML = "$" + total_Deserts;
+            document.getElementById('ItemTotalDeserts').innerHTML = "$" + total_Drinks;
         }
 
         document.querySelectorAll('[id^="q_"]').forEach(item => {
