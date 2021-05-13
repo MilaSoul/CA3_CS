@@ -126,8 +126,8 @@ var total_items = 12;
                     }
                     if (item_cat == 'Drinks'){
                         total_Drinks += item_price;
-
-                }
+                     }
+                    }
                  
                 total = total + item_price;
                 });
@@ -136,7 +136,7 @@ var total_items = 12;
             document.getElementById('ItemTotalStarters').innerHTML = "$" + total_Starters;
             document.getElementById('ItemTotalMain').innerHTML = "$" + total_Main;
             document.getElementById('ItemTotalDeserts').innerHTML = "$" + total_Deserts;
-            document.getElementById('ItemTotalDeserts').innerHTML = "$" + total_Drinks;
+            document.getElementById('ItemTotalDrinks').innerHTML = "$" + total_Drinks;
         }
 
         document.querySelectorAll('[id^="q_"]').forEach(item => {
