@@ -91,4 +91,16 @@ table {
     width: 500px;
 }
 
+.carousel_container{
+    width: 53%;
+    margin: auto;
+    border: 5px solid black;
+}
+
+.carousel_slide{
+    display: flex;
+    width:100%;
+    height: 480px;
+
+}
  
