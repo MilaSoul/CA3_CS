@@ -181,8 +181,8 @@ function CalculateStartersValue(){
 }
 
 
-const carouselSlide = document.querySelectorAll('.carousel-slide');
-const coriuselImages = document.querySelectorAll('.carousel-slides');
+const carouselSlide = document.querySelectorAll('.carousel_slide');
+const carouselImages = document.querySelectorAll('.carousel-slide img');
 
 // Buttons. Getting and saving buttons id into const
 const prevBtn = document.querySelector('#prevButton');
@@ -190,20 +190,20 @@ const nextBtn = document.querySelector('#nextButton');
 
 //Counter 
 let counter =1;
-const size = carouselImage[0].clientWidth;
+const size = carouselImages[0].clientWidth;
 
-carouselSlide.style.transform = 'translateX (' + (-size*counter) + 'px)';
+carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
 
 
 //Button listeners
-nextBtn.addEventListener('click', ()=> {
+nextBtn.addEventListener('click', () => {
     carouselSlide.style.transition = "transform 0.4s ease-in-out";
     counter++;
-    carouselSlide.style.transform = 'translateX (' + (-size*counter) + 'px)';
+    carouselSlide.style.transform = 'translateX (' + (-size * counter) + 'px)';
 });
 
 prevBtn.addEventListener('click', ()=> {
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
     counter--;
     carouselSlide.style.transform = 'translateX (' + (-size*counter) + 'px)';
 });
