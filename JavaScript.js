@@ -9,13 +9,13 @@ var lengthpass = document.getElementById("lengthpass");
 
 ///showing the error box  
 myInput.onfocus = function(){
-    document.getElementById("error").style.display = "block"
+    document.getElementById("messege").style.display = "block"
 }
 
 
 //remove the eeror box from the screen
 myInput.onblur = function(){
-    document.getElementById("error").style.display = "none"
+    document.getElementById("messege").style.display = "none"
 }
 
 
