@@ -168,9 +168,18 @@ var total_items = 12;
         });
 
       
+ // https://getbootstrap.com/docs/4.0/components/carousel/
+                
+ $('.carousel').carousel('cycle');
 
-
-
+ $('#tbInterval').change(function() { // intrvals to slide pic
+     const val = parseInt($(this).val()); // convert into int
+     console.log(`new interval: ${val}`); 
+     $('.carousel').carousel('dispose');
+     $('.carousel').carousel({ interval: val }); 
+     $('#btnStart').hide(); // hide btn
+     $('#btnPause').show();      // show button            
+ });
 
        
       
