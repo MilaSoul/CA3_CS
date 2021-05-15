@@ -39,6 +39,12 @@
 <h1>Using bootstarp (simple carousel with the items)</h1>
 
 
+<div style="z-index: 999; position: absolute; top: 10; left: 10;">
+    <button type="button" class="btn btn-primary" id="btnPause">Pause</button>
+    <button type="button" class="btn btn-success" id="btnStart" style="display: none">Start</button>
+    <input type="number" id="tbInterval" value="5000" /> ms.
+</div>
+
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
