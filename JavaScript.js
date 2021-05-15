@@ -97,48 +97,43 @@ document.getElementById('output').innerHTML = output;
 
 var total_items = 12;
 
-
+         // var initialisation 
         function calculateItemsValue() {
-            var total = 0;
-            var total_Starters = 0;
-            var total_Main = 0;
-            var total_Deserts = 0;
-            var total_Drinks = 0;
-            var total_Veg = 0;
-            var total_NonVeg  = 0;
+            var total = 0; // total num of items
+            var total_Starters = 0;// total num of starters
+            var total_Main = 0;// total num of Main
+            var total_Deserts = 0;// tital num of Deserts
+            var total_Drinks = 0;//total num of Drinks
+            var total_Veg = 0;// total num of Vegeterian
+            var total_NonVeg  = 0; // total num of Non Vegeterian 
 
-           /*for (let i = 1; i <= total_items; i++) {
-              itemID =document.getElementById("q_" + i);
-             // itemID =document.querySelectorAll("#q_1, #q_2, #q_3" + i);
-               total = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
+     
+            document.querySelectorAll('[id^="q_"]').forEach(item => { // select all items from the list
+                var item_price = parseInt(item.value)*parseInt(item.getAttribute("data-price")) // getting price of the item by attribute
+                var item_cat = item.getAttribute("data-cat");// getting items by attribute ?
                 
-            }*/
-            document.querySelectorAll('[id^="q_"]').forEach(item => {
-                var item_price = parseInt(item.value)*parseInt(item.getAttribute("data-price"))
-                var item_cat = item.getAttribute("data-cat");
-                
-                if (!isNaN(item_price)) {
-                    if (item_cat == 'Starters') {
-                        total_Starters += item_price;
+                if (!isNaN(item_price)) { // 
+                    if (item_cat == 'Starters') {//getting the item by name Starters
+                        total_Starters += item_price;//showing price only for Starters
                     }
-                   if (item_cat == 'Main') {
-                    total_Main += item_price;
+                   if (item_cat == 'Main') {//getting the item by name Main
+                    total_Main += item_price;//showing price only for Main
                     }  
-                    if (item_cat == 'Deserts'){
-                        total_Deserts += item_price;
+                    if (item_cat == 'Deserts'){ //getting the item by name Deserts
+                        total_Deserts += item_price; //showing price only for Deserts
                     }
-                    if (item_cat == 'Drinks'){
-                        total_Drinks += item_price;
+                    if (item_cat == 'Drinks'){ //getting the item by name Drinks
+                        total_Drinks += item_price;//showing price only for Drinks
                      }
 
             
-                    var item_veg = item.getAttribute("data-veg");
+                    var item_veg = item.getAttribute("data-veg"); // getting attribute by data-veg
 
-                    if (item_veg == 'true'){
-                        total_Veg += item_price;
+                    if (item_veg == 'true'){//getting the item data name - true
+                        total_Veg += item_price;//showing price only for Veg
                     }
-                    if (item_veg == 'false'){
-                        total_NonVeg += item_price;
+                    if (item_veg == 'false'){//getting the item data name - false
+                        total_NonVeg += item_price;//showing price only for NonVeg
                     }
                     
                     }
@@ -166,46 +161,10 @@ var total_items = 12;
 
        
       
-function CalculateStartersValue(){
-
-    var total_s = 0;
-    for (let n = 1; n <= total_starters; n++) {
-        startersId = document.querySelectorAll("#q_1,#q_2,#q_2," + n);
-        total_s = total_s + parselInt(startersId.value) * parselInt(startersId.getAttribute("data-price"));
-    }
-    document.getElementById('ItemsTotalStarters').innerHTML = "$" + total_s;
-
-    document.querySelectorAll('[id^="q_1"]').forEach(item_s => {
-        item_s.addEventListener('keyup', CalculateStartersValue);
-    });
-}
 
 
-const carouselSlide = document.querySelectorAll('.carousel_slide');
-const carouselImages = document.querySelectorAll('.carousel-slide img');
-
-// Buttons. Getting and saving buttons id into const
-const prevBtn = document.querySelector('#prevButton');
-const nextBtn = document.querySelector('#nextButton');
-
-//Counter 
-let counter =1;
-const size = carouselImages[0].clientWidth;
-
-carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
 
 
-//Button listeners
-nextBtn.addEventListener('click', () => {
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter++;
-    carouselSlide.style.transform = 'translateX (' + (-size * counter) + 'px)';
-});
 
-prevBtn.addEventListener('click', ()=> {
-    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-    counter--;
-    carouselSlide.style.transform = 'translateX (' + (-size*counter) + 'px)';
-});
 
 
