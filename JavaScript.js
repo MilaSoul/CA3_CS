@@ -78,19 +78,20 @@ myInput.onkeyup = function(){
 
 document.getElementById("rundomCustomer").addEventListener('click', rundomCustomer);
 
+
 function rundomCustomer(){
-       fetch('https://randomuser.me/api/?results=5')
+       fetch('https://randomuser.me/api/?results=5')// list of randon users
         .then ((res) => res.json())
         .then((data) => {
-         let author = data.results;
+         let author = data.results; 
          let output = '<h2> Customer</h2>'
         console.log(data);
 
 
-        author.forEach(function(customer){
+        author.forEach(function(customer){ // going throug users (getting names,pic,age,email and phone)
             output += `
            <div
-               <h3>Name:${customer.name.first}</h3>
+               <h3>Name:${customer.name.first}</h3> 
                <ul>
                    <img src="${customer.picture.large}">
                    <li>Age: ${customer.registered.age}</li>
@@ -102,7 +103,7 @@ function rundomCustomer(){
            `;
         });
 
-document.getElementById('output').innerHTML = output;
+document.getElementById('output').innerHTML = output;// output users
 
     })
 };
@@ -115,7 +116,7 @@ var total_items = 12;
             var total = 0; // total num of the items
             var total_Starters = 0;// total num of the starters
             var total_Main = 0;// total num of the Main
-            var total_Desserts = 0;// tital num of the Deserts
+            var total_Deserts = 0;// tital num of the Deserts
             var total_Drinks = 0;//total num of the Drinks
             var total_Veg = 0;// total num of the Vegeterian
             var total_NonVeg  = 0; // total num of the Non Vegeterian 
@@ -132,8 +133,8 @@ var total_items = 12;
                    if (item_cat == 'Main') {//getting the item by the name Main
                     total_Main += item_price;//showing price only for the Main
                     }  
-                    if (item_cat == 'Desserts'){ //getting the item by the name Deserts
-                        total_Desserts += item_price; //showing price only for the Deserts
+                    if (item_cat == 'Deserts'){ //getting the item by the name Deserts
+                        total_Deserts += item_price; //showing price only for the Deserts
                     }
                     if (item_cat == 'Drinks'){ //getting the item by the name Drinks
                         total_Drinks += item_price;//showing price only for the Drinks
@@ -149,11 +150,11 @@ var total_items = 12;
                         total_NonVeg += item_price;//showing price only for the NonVeg
                     }
                     
-                    }
+                }  
                  
                 total = total + item_price; // total sum of all items
                 });
-
+            
             document.getElementById('ItemsTotal').innerHTML = "$" + total; // dispaly items
             document.getElementById('ItemTotalStarters').innerHTML = "$" + total_Starters;//dispaly sum of the Sraters
             document.getElementById('ItemTotalMain').innerHTML = "$" + total_Main;//dispaly sum of the Main
@@ -167,20 +168,12 @@ var total_items = 12;
             item.addEventListener('keyup', calculateItemsValue);
         });
 
+       
       
- // https://getbootstrap.com/docs/4.0/components/carousel/
-                
- $('.carousel').carousel('cycle');
-
- $('#tbInterval').change(function() { // intrvals to slide pic
-     const val = parseInt($(this).val()); // convert into int
-     console.log(`new interval: ${val}`); 
-     $('.carousel').carousel('dispose');
-     $('.carousel').carousel({ interval: val }); 
-     $('#btnStart').hide(); // hide btn
-     $('#btnPause').show();      // show button            
- });
-
+       
+ 
+      
+ 
        
       
 
