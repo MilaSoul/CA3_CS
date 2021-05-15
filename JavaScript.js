@@ -34,7 +34,7 @@ myInput.onblur = function(){
 
 // typing into password feald
 myInput.onkeyup = function(){
-    var LowerCaseLett = /[a-z]/g;
+    var LowerCaseLett = /[a-z]/g; // matching letters lower case
     
     if(myInput.value.match(LowerCaseLett)){
         letter.classList.remove("invalid");
@@ -44,7 +44,7 @@ myInput.onkeyup = function(){
         letter.classList.add("invalid"); 
     }
 // Uppercase Letter
-    var UpperCaseLett = /[A-Z]/g;
+    var UpperCaseLett = /[A-Z]/g;// matching letters uppercase
 
     if(myInput.value.match(UpperCaseLett)){
         uppercase.classList.remove("invalid");
@@ -55,7 +55,7 @@ myInput.onkeyup = function(){
     }
 
 // Number 
-     var Num = /[0-9]/g;
+     var Num = /[0-9]/g;// matching numbers 
 
      if(myInput.value.match(Num)){
          number.classList.remove("invalid");
@@ -66,7 +66,7 @@ myInput.onkeyup = function(){
      }
 
 // Pssword lenght
-     if(myInput.value.length >= 8) {
+     if(myInput.value.length >= 8) { // matching lenght pass
         lengthpass.classList.remove("invalid");
         lengthpass.classList.add("valid");
     } else {
@@ -83,7 +83,7 @@ function rundomCustomer(){
        fetch('https://randomuser.me/api/?results=5')// list of randon users
         .then ((res) => res.json())
         .then((data) => {
-         let author = data.results; 
+         let author = data.results; // storing data
          let output = '<h2> Customer</h2>'
         console.log(data);
 
@@ -165,7 +165,7 @@ var total_items = 12;
         }
 
         document.querySelectorAll('[id^="q_"]').forEach(item => {
-            item.addEventListener('keyup', calculateItemsValue);
+            item.addEventListener('keyup', calculateItemsValue); // showing that we are culc values in the box
         });
 
        

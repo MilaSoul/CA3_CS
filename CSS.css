@@ -40,9 +40,7 @@ a:hover{
 
 #background {
     background-image:url("./img/Pic_1.jpg");
-    
     height: 500px;
-   
 
 }
 
@@ -89,16 +87,12 @@ a:hover{
     display: flex;
     margin-left: 36%;
     padding: 25px;
-    
-   
    
 }
 
 
-
 #rundomCustomer{
     margin-left: 42%;
-    background-color: #555555;
     font-size: 20px;
 }
 
