@@ -97,15 +97,15 @@ document.getElementById('output').innerHTML = output;
 
 var total_items = 12;
 
-         // var initialisation 
+         // var initialisation
         function calculateItemsValue() {
-            var total = 0; // total num of items
-            var total_Starters = 0;// total num of starters
-            var total_Main = 0;// total num of Main
-            var total_Deserts = 0;// tital num of Deserts
-            var total_Drinks = 0;//total num of Drinks
-            var total_Veg = 0;// total num of Vegeterian
-            var total_NonVeg  = 0; // total num of Non Vegeterian 
+            var total = 0; // total num of the items
+            var total_Starters = 0;// total num of the starters
+            var total_Main = 0;// total num of the Main
+            var total_Desserts = 0;// tital num of the Deserts
+            var total_Drinks = 0;//total num of the Drinks
+            var total_Veg = 0;// total num of the Vegeterian
+            var total_NonVeg  = 0; // total num of the Non Vegeterian 
 
      
             document.querySelectorAll('[id^="q_"]').forEach(item => { // select all items from the list
@@ -113,41 +113,41 @@ var total_items = 12;
                 var item_cat = item.getAttribute("data-cat");// getting items by attribute ?
                 
                 if (!isNaN(item_price)) { // 
-                    if (item_cat == 'Starters') {//getting the item by name Starters
-                        total_Starters += item_price;//showing price only for Starters
+                    if (item_cat == 'Starters') {//getting the item by he name Starters
+                        total_Starters += item_price;//showing price only for the Starters
                     }
-                   if (item_cat == 'Main') {//getting the item by name Main
-                    total_Main += item_price;//showing price only for Main
+                   if (item_cat == 'Main') {//getting the item by the name Main
+                    total_Main += item_price;//showing price only for the Main
                     }  
-                    if (item_cat == 'Deserts'){ //getting the item by name Deserts
-                        total_Deserts += item_price; //showing price only for Deserts
+                    if (item_cat == 'Desserts'){ //getting the item by the name Deserts
+                        total_Desserts += item_price; //showing price only for the Deserts
                     }
-                    if (item_cat == 'Drinks'){ //getting the item by name Drinks
-                        total_Drinks += item_price;//showing price only for Drinks
+                    if (item_cat == 'Drinks'){ //getting the item by the name Drinks
+                        total_Drinks += item_price;//showing price only for the Drinks
                      }
 
             
-                    var item_veg = item.getAttribute("data-veg"); // getting attribute by data-veg
+                    var item_veg = item.getAttribute("data-veg"); // getting attribute by the data-veg
 
                     if (item_veg == 'true'){//getting the item data name - true
-                        total_Veg += item_price;//showing price only for Veg
+                        total_Veg += item_price;//showing price only for the Veg
                     }
                     if (item_veg == 'false'){//getting the item data name - false
-                        total_NonVeg += item_price;//showing price only for NonVeg
+                        total_NonVeg += item_price;//showing price only for the NonVeg
                     }
                     
                     }
                  
-                total = total + item_price;
+                total = total + item_price; // total sum of all items
                 });
 
-            document.getElementById('ItemsTotal').innerHTML = "$" + total;
-            document.getElementById('ItemTotalStarters').innerHTML = "$" + total_Starters;
-            document.getElementById('ItemTotalMain').innerHTML = "$" + total_Main;
-            document.getElementById('ItemTotalDeserts').innerHTML = "$" + total_Deserts;
-            document.getElementById('ItemTotalDrinks').innerHTML = "$" + total_Drinks;
-            document.getElementById('ItemTotalVegeterian').innerHTML = "$" + total_Veg;
-            document.getElementById('ItemTotalNonVeg').innerHTML = "$" + total_NonVeg;
+            document.getElementById('ItemsTotal').innerHTML = "$" + total; // dispaly items
+            document.getElementById('ItemTotalStarters').innerHTML = "$" + total_Starters;//dispaly sum of the Sraters
+            document.getElementById('ItemTotalMain').innerHTML = "$" + total_Main;//dispaly sum of the Main
+            document.getElementById('ItemTotalDeserts').innerHTML = "$" + total_Deserts;//dispaly sum of the Deserts
+            document.getElementById('ItemTotalDrinks').innerHTML = "$" + total_Drinks;//dispaly sum of the Drinks
+            document.getElementById('ItemTotalVegeterian').innerHTML = "$" + total_Veg;//dispaly sum of the Veg
+            document.getElementById('ItemTotalNonVeg').innerHTML = "$" + total_NonVeg;//dispaly sum of the NonVeg
         }
 
         document.querySelectorAll('[id^="q_"]').forEach(item => {
